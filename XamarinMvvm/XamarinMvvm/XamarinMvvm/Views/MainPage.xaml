@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="XamarinMvvm.MainPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="XamarinMVVM">
+
+
+    <StackLayout Margin="20"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{Binding Animal.Name}" />
+                    <Span Text=" barked " />
+                    <Span Text="{Binding Count}" />
+                    <Span Text=" times..." />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Button Command="{Binding ClickMeCommand}"
+                
+                Text="Click me!" />
+    </StackLayout>
+
+</ContentPage>
